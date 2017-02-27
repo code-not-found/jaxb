@@ -8,7 +8,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>JAXB - Marshal &amp; Unmarshal with missing @XmlRootElement</name>
+    <name>JAXB - Marshal Element Missing @XmlRootElement Annotation</name>
     <url>https://www.codenotfound.com/2013/07/jaxb-marshal-element-missing-xmlrootelement-annotation.html</url>
 
     <properties>
