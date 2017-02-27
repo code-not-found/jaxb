@@ -8,8 +8,8 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>JAXB - Unmarshalling an XML String</name>
-    <url>http://www.codenotfound.com/2013/07/jaxb-unmarshalling-xml-string.html</url>
+    <name>JAXB - Unmarshal XML String into Java Object</name>
+    <url>https://www.codenotfound.com/2013/07/jaxb-unmarshal-xml-string-into-java-object.html</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
