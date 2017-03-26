@@ -3,4 +3,5 @@ jdk:
 - oraclejdk8
 env:
 - TEST_DIR=jaxb-missing-rootelement
+- TEST_DIR=jaxb-unmarshal-string
 script: cd $TEST_DIR && mvn test -B
