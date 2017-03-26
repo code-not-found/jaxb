@@ -1,0 +1,6 @@
+language: java
+jdk:
+- oraclejdk8
+env:
+- TEST_DIR=jaxb-missing-rootelement
+script: cd $TEST_DIR && mvn test -B
