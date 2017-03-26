@@ -13,20 +13,20 @@ import com.codenotfound.jaxb.model.Car;
 
 public final class UnmarshalHelper {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(UnmarshalHelper.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(UnmarshalHelper.class);
 
-    private UnmarshalHelper() {
-        // not called
-    }
+  private UnmarshalHelper() {
+    // not called
+  }
 
-    public static Car unmarshal(String xml) throws JAXBException {
-        JAXBContext jaxbContext = JAXBContext.newInstance(Car.class);
-        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+  public static Car unmarshal(String xml) throws JAXBException {
+    JAXBContext jaxbContext = JAXBContext.newInstance(Car.class);
+    Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
-        StringReader reader = new StringReader(xml);
-        Car car = (Car) jaxbUnmarshaller.unmarshal(reader);
+    StringReader reader = new StringReader(xml);
+    Car car = (Car) jaxbUnmarshaller.unmarshal(reader);
 
-        LOGGER.info(car.toString());
-        return car;
-    }
+    LOGGER.info(car.toString());
+    return car;
+  }
 }
