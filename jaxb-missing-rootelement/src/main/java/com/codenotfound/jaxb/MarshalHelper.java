@@ -15,44 +15,44 @@ import com.codenotfound.jaxb.model.Car;
 
 public final class MarshalHelper {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(MarshalHelper.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(MarshalHelper.class);
 
-    private MarshalHelper() {
-        // not called
-    }
+  private MarshalHelper() {
+    // not called
+  }
 
-    public static String marshalError(Car car) throws JAXBException {
-        StringWriter stringWriter = new StringWriter();
+  public static String marshalError(Car car) throws JAXBException {
+    StringWriter stringWriter = new StringWriter();
 
-        JAXBContext jaxbContext = JAXBContext.newInstance(Car.class);
-        Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+    JAXBContext jaxbContext = JAXBContext.newInstance(Car.class);
+    Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
-        // format the XML output
-        jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+    // format the XML output
+    jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-        jaxbMarshaller.marshal(car, stringWriter);
+    jaxbMarshaller.marshal(car, stringWriter);
 
-        String result = stringWriter.toString();
-        LOGGER.info(result);
-        return result;
-    }
+    String result = stringWriter.toString();
+    LOGGER.info(result);
+    return result;
+  }
 
-    public static String marshal(Car car) throws JAXBException {
-        StringWriter stringWriter = new StringWriter();
+  public static String marshal(Car car) throws JAXBException {
+    StringWriter stringWriter = new StringWriter();
 
-        JAXBContext jaxbContext = JAXBContext.newInstance(Car.class);
-        Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+    JAXBContext jaxbContext = JAXBContext.newInstance(Car.class);
+    Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
-        // format the XML output
-        jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+    // format the XML output
+    jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-        QName qName = new QName("com.codenotfound.jaxb.model", "car");
-        JAXBElement<Car> root = new JAXBElement<Car>(qName, Car.class, car);
+    QName qName = new QName("com.codenotfound.jaxb.model", "car");
+    JAXBElement<Car> root = new JAXBElement<Car>(qName, Car.class, car);
 
-        jaxbMarshaller.marshal(root, stringWriter);
+    jaxbMarshaller.marshal(root, stringWriter);
 
-        String result = stringWriter.toString();
-        LOGGER.info(result);
-        return result;
-    }
+    String result = stringWriter.toString();
+    LOGGER.info(result);
+    return result;
+  }
 }

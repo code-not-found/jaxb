@@ -15,30 +15,30 @@ import com.codenotfound.jaxb.model.Car;
 
 public final class UnmarshalHelper {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(UnmarshalHelper.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(UnmarshalHelper.class);
 
-    private UnmarshalHelper() {
-        // not called
-    }
+  private UnmarshalHelper() {
+    // not called
+  }
 
-    public static Car unmarshalError(File file) throws JAXBException {
-        JAXBContext jaxbContext = JAXBContext.newInstance(Car.class);
-        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+  public static Car unmarshalError(File file) throws JAXBException {
+    JAXBContext jaxbContext = JAXBContext.newInstance(Car.class);
+    Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
-        Car car = (Car) jaxbUnmarshaller.unmarshal(file);
+    Car car = (Car) jaxbUnmarshaller.unmarshal(file);
 
-        LOGGER.info(car.toString());
-        return car;
-    }
+    LOGGER.info(car.toString());
+    return car;
+  }
 
-    public static Car unmarshal(File file) throws JAXBException {
-        JAXBContext jaxbContext = JAXBContext.newInstance(Car.class);
-        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+  public static Car unmarshal(File file) throws JAXBException {
+    JAXBContext jaxbContext = JAXBContext.newInstance(Car.class);
+    Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
-        JAXBElement<Car> root = jaxbUnmarshaller.unmarshal(new StreamSource(file), Car.class);
-        Car car = root.getValue();
+    JAXBElement<Car> root = jaxbUnmarshaller.unmarshal(new StreamSource(file), Car.class);
+    Car car = root.getValue();
 
-        LOGGER.info(car.toString());
-        return car;
-    }
+    LOGGER.info(car.toString());
+    return car;
+  }
 }

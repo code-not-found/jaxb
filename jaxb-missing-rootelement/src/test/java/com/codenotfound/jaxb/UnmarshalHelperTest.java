@@ -17,29 +17,29 @@ import com.codenotfound.jaxb.model.Car;
 
 public class UnmarshalHelperTest {
 
-    private static final Logger logger = LoggerFactory.getLogger(UnmarshalHelperTest.class);
+  private static final Logger logger = LoggerFactory.getLogger(UnmarshalHelperTest.class);
 
-    public static File file;
+  public static File file;
 
-    @BeforeClass
-    public static void setUpBeforeClass() {
-        file = new File("./src/test/resources/xml/golf.xml");
+  @BeforeClass
+  public static void setUpBeforeClass() {
+    file = new File("./src/test/resources/xml/golf.xml");
+  }
+
+  @Test
+  public void testUnmarshalError() {
+    try {
+      UnmarshalHelper.unmarshalError(file);
+      fail("no exception thrown");
+    } catch (Exception e) {
+      logger.error("MarshalException", e);
+      assertTrue(e.toString().contains("unexpected element (uri:"));
     }
+  }
 
-    @Test
-    public void testUnmarshalError() {
-        try {
-            UnmarshalHelper.unmarshalError(file);
-            fail("no exception thrown");
-        } catch (Exception e) {
-            logger.error("MarshalException", e);
-            assertTrue(e.toString().contains("unexpected element (uri:"));
-        }
-    }
-
-    @Test
-    public void testUnmarshal() throws JAXBException {
-        Car car = UnmarshalHelper.unmarshal(file);
-        assertEquals(car.toString(), "Car [make=Golf, manufacturer=Volkswagen, id=DEF-456]");
-    }
+  @Test
+  public void testUnmarshal() throws JAXBException {
+    Car car = UnmarshalHelper.unmarshal(file);
+    assertEquals(car.toString(), "Car [make=Golf, manufacturer=Volkswagen, id=DEF-456]");
+  }
 }
