@@ -47,7 +47,7 @@ public final class MarshalHelper {
     jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
     QName qName = new QName("com.codenotfound.jaxb.model", "car");
-    JAXBElement<Car> root = new JAXBElement<Car>(qName, Car.class, car);
+    JAXBElement<Car> root = new JAXBElement<>(qName, Car.class, car);
 
     jaxbMarshaller.marshal(root, stringWriter);
 

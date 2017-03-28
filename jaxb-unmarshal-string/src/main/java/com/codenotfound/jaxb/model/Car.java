@@ -38,6 +38,7 @@ public class Car {
     this.id = id;
   }
 
+  @Override
   public String toString() {
     return "Car [" + "make=" + make + ", manufacturer=" + manufacturer + ", id=" + id + "]";
   }
