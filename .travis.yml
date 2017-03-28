@@ -13,7 +13,3 @@ script:
 - cd $PROJECT_DIR
 - mvn test -B
 - ./runSonarQubeAnalysis.sh
-
-cache:
-  directories:
-- '$HOME/.sonar/cache'
