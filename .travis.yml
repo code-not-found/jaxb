@@ -6,10 +6,15 @@ jdk:
 - oraclejdk8
 
 env:
+- PROJECT_DIR=repo
 - PROJECT_DIR=jaxb-missing-rootelement
 - PROJECT_DIR=jaxb-unmarshal-string
 
 script:
-- cd $PROJECT_DIR
-- mvn test -B
-- ./runSonarQubeAnalysis.sh
+- test $PROJECT_DIR = repo && ./runSonarQubeAnalysis.sh
+- cd $PROJECT_DIR && mvn test -B
+
+cache:
+  directories:
+  - $HOME/.m2/repository
+  - $HOME/.sonar/cache
