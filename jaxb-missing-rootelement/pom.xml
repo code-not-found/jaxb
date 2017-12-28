@@ -5,21 +5,19 @@
 
   <groupId>com.codenotfound</groupId>
   <artifactId>jaxb-missing-rootelement</artifactId>
-  <version>1.0</version>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>JAXB - Marshal Element Missing @XmlRootElement Annotation</name>
-  <url>https://www.codenotfound.com/2013/07/jaxb-marshal-element-missing-xmlrootelement-annotation.html</url>
+  <url>https://www.codenotfound.com/jaxb-marshal-element-missing-xmlrootelement-annotation.html</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
-
     <junit.version>4.12</junit.version>
-    <ch.qos.logback.version>1.2.2</ch.qos.logback.version>
+    <ch.qos.logback.version>1.2.3</ch.qos.logback.version>
     <slf4j.version>1.7.25</slf4j.version>
-
-    <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
+    <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
   </properties>
 
   <dependencies>
