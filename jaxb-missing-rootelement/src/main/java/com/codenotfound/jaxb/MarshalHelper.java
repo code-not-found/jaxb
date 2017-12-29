@@ -15,7 +15,8 @@ import com.codenotfound.jaxb.model.Car;
 
 public final class MarshalHelper {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(MarshalHelper.class);
+  private static final Logger LOGGER =
+      LoggerFactory.getLogger(MarshalHelper.class);
 
   private MarshalHelper() {
     // not called
@@ -28,7 +29,8 @@ public final class MarshalHelper {
     Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
     // format the XML output
-    jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+    jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,
+        true);
 
     jaxbMarshaller.marshal(car, stringWriter);
 
@@ -44,7 +46,8 @@ public final class MarshalHelper {
     Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
     // format the XML output
-    jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+    jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,
+        true);
 
     QName qName = new QName("com.codenotfound.jaxb.model", "car");
     JAXBElement<Car> root = new JAXBElement<>(qName, Car.class, car);

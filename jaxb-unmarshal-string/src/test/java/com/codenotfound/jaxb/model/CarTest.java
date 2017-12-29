@@ -38,6 +38,8 @@ public class CarTest {
     car.setManufacturer("Volkswagen");
     car.setId("ABC-123");
 
-    assertEquals("Car [make=Passat, manufacturer=Volkswagen, id=ABC-123]", car.toString());
+    assertEquals(
+        "Car [make=Passat, manufacturer=Volkswagen, id=ABC-123]",
+        car.toString());
   }
 }

@@ -13,7 +13,8 @@ import com.codenotfound.jaxb.model.Car;
 
 public final class UnmarshalHelper {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(UnmarshalHelper.class);
+  private static final Logger LOGGER =
+      LoggerFactory.getLogger(UnmarshalHelper.class);
 
   private UnmarshalHelper() {
     // not called

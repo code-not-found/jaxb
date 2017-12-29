@@ -15,7 +15,8 @@ import com.codenotfound.jaxb.model.Car;
 
 public final class UnmarshalHelper {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(UnmarshalHelper.class);
+  private static final Logger LOGGER =
+      LoggerFactory.getLogger(UnmarshalHelper.class);
 
   private UnmarshalHelper() {
     // not called
@@ -35,7 +36,8 @@ public final class UnmarshalHelper {
     JAXBContext jaxbContext = JAXBContext.newInstance(Car.class);
     Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
-    JAXBElement<Car> root = jaxbUnmarshaller.unmarshal(new StreamSource(file), Car.class);
+    JAXBElement<Car> root =
+        jaxbUnmarshaller.unmarshal(new StreamSource(file), Car.class);
     Car car = root.getValue();
 
     LOGGER.info(car.toString());

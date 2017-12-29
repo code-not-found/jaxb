@@ -15,7 +15,8 @@ import com.codenotfound.jaxb.model.Car;
 
 public class MarshalHelperTest {
 
-  private static final Logger logger = LoggerFactory.getLogger(MarshalHelperTest.class);
+  private static final Logger logger =
+      LoggerFactory.getLogger(MarshalHelperTest.class);
 
   public static Car car;
 
@@ -34,7 +35,8 @@ public class MarshalHelperTest {
       fail("no exception thrown");
     } catch (MarshalException e) {
       logger.error("MarshalException", e);
-      assertTrue(e.toString().contains("is missing an @XmlRootElement annotation"));
+      assertTrue(e.toString()
+          .contains("is missing an @XmlRootElement annotation"));
     }
   }
 

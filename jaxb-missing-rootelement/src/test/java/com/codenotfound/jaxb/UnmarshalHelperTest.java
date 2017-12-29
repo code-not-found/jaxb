@@ -17,7 +17,8 @@ import com.codenotfound.jaxb.model.Car;
 
 public class UnmarshalHelperTest {
 
-  private static final Logger logger = LoggerFactory.getLogger(UnmarshalHelperTest.class);
+  private static final Logger logger =
+      LoggerFactory.getLogger(UnmarshalHelperTest.class);
 
   public static File file;
 
@@ -40,6 +41,7 @@ public class UnmarshalHelperTest {
   @Test
   public void testUnmarshal() throws JAXBException {
     Car car = UnmarshalHelper.unmarshal(file);
-    assertEquals(car.toString(), "Car [make=Golf, manufacturer=Volkswagen, id=DEF-456]");
+    assertEquals(car.toString(),
+        "Car [make=Golf, manufacturer=Volkswagen, id=DEF-456]");
   }
 }

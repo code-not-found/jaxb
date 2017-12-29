@@ -15,14 +15,17 @@ public class UnmarshalHelperTest {
 
   @BeforeClass
   public static void setUpBeforeClass() {
-    xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" " + "standalone=\"yes\"?>"
+    xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" "
+        + "standalone=\"yes\"?>"
         + "<ns2:Car xmlns:ns2=\"com.codenotfound.jaxb.model\" id=\"ABC-123\">"
-        + "<make>Passat</make>" + "<manufacturer>Volkswagen</manufacturer></ns2:Car>";
+        + "<make>Passat</make>"
+        + "<manufacturer>Volkswagen</manufacturer></ns2:Car>";
   }
 
   @Test
   public void testUnmarshal() throws JAXBException {
     Car car = UnmarshalHelper.unmarshal(xml);
-    assertEquals(car.toString(), "Car [make=Passat, manufacturer=Volkswagen, id=ABC-123]");
+    assertEquals(car.toString(),
+        "Car [make=Passat, manufacturer=Volkswagen, id=ABC-123]");
   }
 }

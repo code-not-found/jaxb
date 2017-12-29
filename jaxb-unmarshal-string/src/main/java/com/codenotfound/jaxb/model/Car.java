@@ -4,7 +4,8 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(namespace = "com.codenotfound.jaxb.model", name = "Car")
+@XmlRootElement(namespace = "com.codenotfound.jaxb.model",
+    name = "Car")
 public class Car {
 
   private String make;
@@ -40,6 +41,7 @@ public class Car {
 
   @Override
   public String toString() {
-    return "Car [" + "make=" + make + ", manufacturer=" + manufacturer + ", id=" + id + "]";
+    return "Car [" + "make=" + make + ", manufacturer=" + manufacturer
+        + ", id=" + id + "]";
   }
 }

@@ -2,8 +2,7 @@
 <configuration>
 
   <!-- PROPERTIES -->
-  <property name="layout"
-    value="%d{HH:mm:ss.SSS} %-5level [%thread][%logger{0}] %m%n" />
+  <property name="layout" value="%d{HH:mm:ss.SSS} %-5level [%thread][%logger{0}] %m%n" />
   <property name="logFile" value="jaxb-unmarshal-string-test.log" />
 
   <!-- LOGBACK APPENDERS -->
@@ -13,8 +12,7 @@
     </encoder>
   </appender>
 
-  <appender name="LOG_FILE"
-    class="ch.qos.logback.core.rolling.RollingFileAppender">
+  <appender name="LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <file>${logFile}</file>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
       <fileNamePattern>${logFile}.%d{yyyy-MM-dd}.log
